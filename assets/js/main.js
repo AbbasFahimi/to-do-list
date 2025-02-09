@@ -30,7 +30,7 @@ $(document).ready(function () {
       .focus();
   });
   $("#delet").click(function () {
-    $(".input-group").fadeOut(200);
+    $(".input-group").remove();
   });
   $(".body").on("click", ".btn-1", function () {
     $(this)
