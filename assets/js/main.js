@@ -5,6 +5,17 @@ $(document).ready(function () {
     );
   });
   $("#submit").click(function () {
+    let isValid = true;
+    $("input").each(function () {
+      if ($(this).val().trim() === "") {
+        isValid = false;
+        return false;
+      }
+    });
+    if (!isValid) {
+      alert("همه فیلد ها را پر کنید.");
+      return
+    }
     $(".body div").children("input").attr("disabled", true);
     $(".body div").children(".btn-2 , .btn-3 , .btn-1").removeClass("hidden");
   });
